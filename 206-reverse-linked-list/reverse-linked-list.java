@@ -8,6 +8,14 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+/**
+	1       ->     2   ->                 3     ->  null
+		prev ->   curr  ->   (start)>   next->curr.next-> prev(1)
+		3->null
+		null->1
+		1->2
+		2->3
+ */
 class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode prevNode = null, next = null, currNode = head;
